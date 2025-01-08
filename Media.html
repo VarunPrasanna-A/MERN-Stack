@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Responsive Media Page</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(#f7f7f7, #d2ffba);
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 50px 22px;
+    background: linear-gradient(130deg, #c9e4ca, #ffffff);
+}
+
+header h1 {
+    font-size: 2em;
+    color: #2f4f4f;
+    margin-bottom: 35px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 35px;
+    color: #666;
+    font-family: 'Lato', sans-serif;
+}
+
+.mda {
+    background: #8bc34a;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 2em;
+    text-decoration: none;
+    transition: transform 0.5s, box-shadow 0.5s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header .mda:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(92, 92, 92, 0.5);
+}
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1150px;
+    padding: 0 20px;
+}
+
+.grid {
+    background: linear-gradient(#ffffff, #f2f2f2);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.grid h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Merriweather', sans-serif;
+}
+
+.grid p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.4;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #d9d9d9;
+    color: #333;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1150px) {
+    .grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-view {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .mda {
+        font-size: 1.5em;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+</style> 
+    </head>
+    <body>
+        <header>
+            <h1>Landing Page</h1>
+            <p>Here we can experience the responsive design </p>
+            <a href="https://youtu.be/kaUaAPC58Ro" class="mda">Just Begin!</a>
+        </header>
+        <section class="grid-view">
+            <div class="grid">
+                <h2>Responsive Media 1</h2>
+                <p>Here is a innovative design w</p>
+
+            </div>
+            <div class="grid">
+                <h2>Responsive Media 2</h2>
+                <p>Experience the seamless responsive to all over the devices and screen size</p>
+
+            </div>
+            <div class="grid">
+                <h2>Responsive Media 3</h2>
+                <p>End-user can enjoy the edge-cutting</p>
+
+            </div>
+            <div class="grid">
+                <h2>Responsive Media 4</h2>
+                <p>&copy;All Rights Reserved.<a href="">Term of Use</a></p>
+
+            </div>
+        </section>
+    </body>
+</html>

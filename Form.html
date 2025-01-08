@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Impressive Form Design</title>
+        <style>
+            body{
+                font-family:cursive;
+                background: linear-gradient(120,#77abff);
+                color: blue;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 110vh;
+                box-shadow: 10px 10px 10px;
+            }
+            .form{
+                background: hsl(271, 100%, 89%);
+                backdrop-filter: blur(12px) ;
+                padding: 28px;
+                border-radius: 5%;
+                width: 100%;
+                max-width: 400px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            }
+            .form h1{
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: x-large;
+                text-shadow: 5px 5px 10px;
+            }
+            .form label{
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                
+            }
+            .form input[type="text"], .form input[type="email"], .form input[type="password"],.form button
+            {
+                width: 100%;
+                padding: 12px 20px;    
+                margin-bottom: 18px ;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                transition: all 0.5s ease;
+                
+            }
+            .form input[type="text"], .form input[type="email"], .form input[type="password"]
+            {
+                background: rgb(rgb(255, 142, 223), rgb(125, 246, 255), rgb(134, 134, 255));
+                box-shadow: 1px 1px 5px;
+            }
+            .form input[type="text"]:focus,
+            .form input[type="email"]:focus,
+            .form input[type="password"]:focus{
+                box-shadow: 0 0 8px rgb(125, 246, 255);
+            }
+            .form button
+            {
+                background: hsl(271, 100%, 70%);
+                color: #f2b1ff;
+                font-weight: bold;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+            }
+            .form button:hover
+            {
+                background: #ff8200;
+                box-shadow: 0 6px;
+                transform: translate3d(2px)
+            }
+            .form p
+            {
+                text-align: center;
+                font-size: 0.7em;
+                color: rgb(125, 246, 255);
+            }
+        </style>
+    </head>
+    <body>
+            <div class="form">
+                <h1>Sign Up</h1>
+                <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Your Email" required>
+                <br>
+                <label for ="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <br>
+                <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account ?<a href ="login.html">Sign In</a></p>
+            </div>
+    </body>
+</html>

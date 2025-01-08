@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>HTML API Project</title>
+    </head>
+    <body>
+        <h1>Weather Application</h1>
+        <button id="getClick">Check Weather</button>
+        <p id="temperature">This webpage is designed to know about the Weather Updates.</p>
+        <script>
+            const id='';
+            const temperature=document.getElementById('temperature');
+            const CheckWeather=document.getElementById('getClick');
+            //Definition
+            CheckWeather.addEventListener('click',()=>{
+                if('geolocation' in navigator){
+                    navigator.geolocation.getCurrentPosition((position)=>{
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+
+                        //FetchAPI
+                        localStorage.setItem('Latitude',latitude);
+                        localStorage.setItem('Longitude',longitude);
+                        
+                        const url=`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=YOUR_API_KEY`;
+                        fetch(url).then(Response =>Response.json())
+                        .then(data =>{
+                            const weather = {
+                                location: data.name,
+                                temperature: data.main.temp,
+                                description: data.weather[0].description
+                            };
+                            temperature.textContent = `Location: ${weather.location}, Temperature: ${weather.temperature} K, Description: ${weather.description}`;
+                        })
+                    })
+                }
+            })
+        </script>
+    </body>
+</html>

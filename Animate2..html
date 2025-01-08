@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>UdhayaPrakash</title>
+        <style>
+            body{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: linear-gradient(#ff9e9e,#aeb8ff)
+            }
+            .anime{
+                overflow: hidden;
+                width: auto;
+                border: 2px solid #edffed;
+                border-radius: 12px;
+                padding: 12px;
+                white-space: nowrap;
+            }
+            .effect{
+                animation: scroll-left 2s linear infinite;
+            }
+            @keyframes scroll-left{
+                from{
+                    transform: translateX(100%);
+                }
+                to{
+                    transform: translateX(-50%);
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <divc class="anime">
+            <div class="effect">Here is the scrolling text animation</div>
+
+        </div>
+    </body>
+</html>
